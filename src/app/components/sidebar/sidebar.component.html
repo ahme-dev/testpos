@@ -1,22 +1,41 @@
 <div
-	class="flex flex-col gap-8 justify-between bg-neutral-50 h-full ps-8 pe-1 py-12"
+	class="flex flex-col gap-10 justify-between bg-neutral-50 text-neutral-700 h-full ps-8 pe-1 py-12"
 >
 	<div></div>
 
 	<!-- center -->
 	<div class="flex flex-col gap-4">
-		<app-sidebar-item [selected]="true" title="POS System"></app-sidebar-item>
-		<app-sidebar-item title="Customers"></app-sidebar-item>
-		<app-sidebar-item title="Product"></app-sidebar-item>
-		<app-sidebar-item title="Order List"></app-sidebar-item>
-		<app-sidebar-item title="Checkout"></app-sidebar-item>
-		<app-sidebar-item title="Settings"></app-sidebar-item>
+		<app-sidebar-item
+			[icon]="faMoneyBills"
+			[selected]="true"
+			title="POS System"
+		></app-sidebar-item>
+		<app-sidebar-item [icon]="faUser" title="Customers"></app-sidebar-item>
+		<app-sidebar-item [icon]="faBriefcase" title="Product"></app-sidebar-item>
+		<app-sidebar-item
+			[icon]="faRectangleList"
+			title="Order List"
+		></app-sidebar-item>
+		<app-sidebar-item [icon]="faFileLines" title="Checkout"></app-sidebar-item>
+		<app-sidebar-item [icon]="faSliders" title="Settings"></app-sidebar-item>
 	</div>
 
 	<!-- bottom -->
 	<div class="flex flex-col gap-4 items-start">
-		<app-sidebar-item [secondary]="true" title="Help Center"></app-sidebar-item>
-		<app-sidebar-item [secondary]="true" title="Contact Us"></app-sidebar-item>
-		<app-sidebar-item [secondary]="true" title="Logout"></app-sidebar-item>
+		<app-sidebar-item
+			[icon]="faCircleQuestion"
+			[secondary]="true"
+			title="Help Center"
+		></app-sidebar-item>
+		<app-sidebar-item
+			[icon]="faCommentDots"
+			[secondary]="true"
+			title="Contact Us"
+		></app-sidebar-item>
+		<app-sidebar-item
+			[icon]="faArrowRightFromBracket"
+			[secondary]="true"
+			title="Logout"
+		></app-sidebar-item>
 	</div>
 </div>
