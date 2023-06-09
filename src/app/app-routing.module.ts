@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { CustomersComponent } from "./pages/customers/customers.component";
 import { SystemComponent } from "./pages/system/system.component";
+import { SalesComponent } from "./pages/sales/sales.component";
 
 const routes: Routes = [
 	{
@@ -14,8 +14,8 @@ const routes: Routes = [
 		component: SystemComponent,
 	},
 	{
-		path: "customers",
-		component: CustomersComponent,
+		path: "sales",
+		component: SalesComponent,
 	},
 ];
 

@@ -5,14 +5,14 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { SystemComponent } from "./pages/system/system.component";
-import { CustomersComponent } from "./pages/customers/customers.component";
-import { CustomersService } from "./services/customers.service";
 import { SystemService } from "./services/system.service";
+import { SalesComponent } from "./pages/sales/sales.component";
+import { SalesService } from "./services/sales.service";
 
 @NgModule({
-	declarations: [AppComponent, SystemComponent, CustomersComponent],
+	declarations: [AppComponent, SystemComponent, SalesComponent],
 	imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
-	providers: [CustomersService, SystemService],
+	providers: [SystemService, SalesService],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}
