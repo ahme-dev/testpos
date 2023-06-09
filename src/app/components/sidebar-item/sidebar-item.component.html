@@ -1,0 +1,22 @@
+<div
+	class="flex flex-row justify-between gap-8 pe-2 cursor-pointer"
+	[ngClass]="{
+		'text-pink-600': selected,
+		'text-gray-500': secondary,
+	}"
+>
+	<!-- left -->
+	<div class="flex flex-row gap-2 items-center">
+		<p>icon</p>
+		<p>{{ title }}</p>
+	</div>
+
+	<!-- right -->
+	<div class="flex flex-row gap-4 items-center">
+		<p *ngIf="">alticon</p>
+		<div
+			class="w-1 h-full rounded-md"
+			[class]="selected ? 'bg-pink-600' : 'bg-transparent'"
+		></div>
+	</div>
+</div>
