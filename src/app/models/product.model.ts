@@ -1,5 +1,13 @@
 export type IProductCategory = "Dresses" | "Jeans" | "Skirts" | "Shirts";
 
+export const productCategories = [
+	"Dresses",
+	"Jeans",
+	"Skirts",
+	"Shirts",
+	"All",
+] as const;
+
 export interface IProduct {
 	id: number;
 	price: number;

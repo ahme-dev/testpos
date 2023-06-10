@@ -1,6 +1,6 @@
-<div class="flex flex-row h-screen">
+<div class="grid grid-cols-8 h-screen">
 	<!-- products -->
-	<div class="grow py-12 px-8 flex flex-col gap-8 overflow-scroll">
+	<div class="col-span-6 py-12 px-8 flex flex-col gap-8 overflow-scroll">
 		<!-- filtering -->
 		<div class="flex flex-col gap-4">
 			<!-- welcome and search -->
@@ -15,6 +15,8 @@
 				>
 					<input
 						type="text"
+						name="searchText"
+						[(ngModel)]="systemService.searchText"
 						class="w-full h-full focus:outline-none placeholder:text-gray-500 bg-transparent"
 						placeholder="Search anything here..."
 					/>
@@ -27,14 +29,15 @@
 				<p class="">Categories</p>
 				<div class="grow flex flex-row gap-4 justify-end flex-wrap">
 					<button
+						(click)="systemService.searchCategory = category"
 						class="py-1 px-8 rounded-lg shadow-sm active:ring-2 ring-pink-600 transition-all"
 						[ngClass]="{
-						'bg-pink-600 text-white': category === 'Dresses',
-						'bg-gray-50 text-gray-700': category !== 'Dresses',
-					}"
-						*ngFor="
-							let category of ['Dresses', 'Jeans', 'Skirts', 'Shirts', 'All']
-						"
+							'bg-pink-600 text-white':
+								category === systemService.searchCategory,
+							'bg-gray-50 text-gray-700':
+								category !== systemService.searchCategory
+						}"
+						*ngFor="let category of categoriesList"
 					>
 						{{ category }}
 					</button>
@@ -45,20 +48,27 @@
 		<!-- list -->
 		<div class="grid grid-cols-4 gap-4">
 			<app-product-item
-				*ngFor="let product of products"
+				*ngFor="let product of systemService.filteredProducts"
 				[product]="product"
 			></app-product-item>
+			<div
+				*ngIf="systemService.filteredProducts.length === 0"
+				class="col-span-4 text-gray-400 py-12 flex flex-col gap-4 items-center"
+			>
+				<fa-icon class="text-6xl" [icon]="faSadTear"></fa-icon>
+				<p class="font-bold">Sorry, no items found!</p>
+			</div>
 		</div>
 	</div>
 
 	<!-- checkout -->
-	<div class="py-8 px-4 flex flex-col gap-4 bg-gray-50 shadow-sm">
+	<div class="col-span-2 py-8 px-4 flex flex-col gap-4 bg-gray-50 shadow-sm">
 		<h1 class="font-bold text-xl">Current Order</h1>
 
 		<!-- items -->
 		<div class="grow">
 			<app-checkout-product-item
-				*ngFor="let checkoutProduct of checkoutProducts"
+				*ngFor="let checkoutProduct of systemService.checkoutProducts"
 				[checkoutProduct]="checkoutProduct"
 			></app-checkout-product-item>
 		</div>
@@ -69,12 +79,12 @@
 			<div class="flex flex-col gap-2 text-xs bg-gray-200 py-6 font-bold">
 				<div class="flex flex-row justify-between px-4">
 					<p class="text-gray-400">Subtital</p>
-					<p>112</p>
+					<p>{{ systemService.checkoutTotal }}</p>
 				</div>
 
 				<div class="flex flex-row justify-between px-4">
 					<p class="text-gray-400">Discount</p>
-					<p>112</p>
+					<p>{{ systemService.checkoutDiscount }}</p>
 				</div>
 
 				<div class="flex flex-row h-8 items-center">
@@ -85,7 +95,7 @@
 
 				<div class="flex flex-row justify-between px-4">
 					<p>Total</p>
-					<p>112</p>
+					<p>{{ systemService.priceAfterDiscount }}</p>
 				</div>
 			</div>
 

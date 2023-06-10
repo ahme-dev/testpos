@@ -18,6 +18,28 @@ export class SystemService {
 	products: IProduct[] = mockProducts;
 	checkoutProducts: ICheckoutProduct[] = mockCheckoutProducts;
 
+	// filter products based on search category and text
+	get filteredProducts() {
+		return this.products.filter((product) => {
+			if (this.searchCategory !== "All") {
+				if (this.searchCategory !== product.category) {
+					return false;
+				}
+			}
+
+			if (this.searchText.trim() !== "") {
+				if (
+					!product.name.toLowerCase().includes(this.searchText.toLowerCase()) &&
+					!product.about.toLowerCase().includes(this.searchText.toLowerCase())
+				) {
+					return false;
+				}
+			}
+
+			return true;
+		});
+	}
+
 	// add an item to the checkout
 	addToCheckout(product: IProduct) {
 		this.checkoutProducts.push({ ...product, quantity: 1 });
@@ -40,7 +62,7 @@ export class SystemService {
 	}
 
 	// the discount to be applied to the checkout
-	checkoutDiscount = 0;
+	checkoutDiscount = 5.99;
 
 	// calculate the total price of the checkout after discount
 	get priceAfterDiscount() {

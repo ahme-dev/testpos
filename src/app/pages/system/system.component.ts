@@ -1,6 +1,12 @@
 import { Component } from "@angular/core";
+import { faSadTear } from "@fortawesome/free-regular-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { ICheckoutProduct, IProduct } from "src/app/models/product.model";
+import {
+	ICheckoutProduct,
+	IProduct,
+	IProductCategory,
+	productCategories,
+} from "src/app/models/product.model";
 import { SystemService } from "src/app/services/system.service";
 
 @Component({
@@ -8,13 +14,10 @@ import { SystemService } from "src/app/services/system.service";
 	templateUrl: "./system.component.html",
 })
 export class SystemComponent {
-	products: IProduct[];
-	checkoutProducts: ICheckoutProduct[];
-
 	faSearch = faSearch;
+	faSadTear = faSadTear;
 
-	constructor(systemService: SystemService) {
-		this.products = systemService.products;
-		this.checkoutProducts = systemService.checkoutProducts;
-	}
+	categoriesList = productCategories;
+
+	constructor(public systemService: SystemService) {}
 }
