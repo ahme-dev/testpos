@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 import {
 	faCircleQuestion,
 	faCommentDots,
@@ -27,4 +28,15 @@ export class SidebarComponent {
 	faCircleQuestion = faCircleQuestion;
 	faCommentDots = faCommentDots;
 	faArrowRightFromBracket = faArrowRightFromBracket;
+
+	constructor(private router: Router) {}
+
+	get currentUrl() {
+		return this.router.url;
+	}
+
+	changeRoute(route: string) {
+		console.log("Changing route to", this.currentUrl);
+		this.router.navigate([route]);
+	}
 }

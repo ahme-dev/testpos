@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faQuestion } from "@fortawesome/free-solid-svg-icons";
 
@@ -14,4 +14,6 @@ export class SidebarItemComponent {
 
 	@Input() icon: IconProp = faQuestion;
 	@Input() altIcon: IconProp | null = null;
+
+	@Output() onClick = new EventEmitter();
 }

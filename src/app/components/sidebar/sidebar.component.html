@@ -6,11 +6,17 @@
 	<!-- center -->
 	<div class="flex flex-col gap-4">
 		<app-sidebar-item
+			(onClick)="changeRoute('system')"
 			[icon]="faMoneyBills"
-			[selected]="true"
+			[selected]="currentUrl == '/system'"
 			title="POS System"
 		></app-sidebar-item>
-		<app-sidebar-item [icon]="faUser" title="Customers"></app-sidebar-item>
+		<app-sidebar-item
+			(onClick)="changeRoute('sales')"
+			[icon]="faUser"
+			[selected]="currentUrl == '/sales'"
+			title="Customers"
+		></app-sidebar-item>
 		<app-sidebar-item [icon]="faBriefcase" title="Product"></app-sidebar-item>
 		<app-sidebar-item
 			[icon]="faRectangleList"
