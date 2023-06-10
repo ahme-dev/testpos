@@ -54,6 +54,7 @@
 			<app-product-item
 				*ngFor="let product of systemService.filteredProducts"
 				[product]="product"
+				(onClick)="systemService.addToCheckout(product)"
 			></app-product-item>
 			<div
 				*ngIf="systemService.filteredProducts.length === 0"
@@ -67,16 +68,30 @@
 
 	<!-- checkout -->
 	<div
-		class="col-span-3 lg:col-span-2 py-8 px-2 lg:px-4 flex flex-col gap-4 bg-gray-50 shadow-sm"
+		class="col-span-3 lg:col-span-2 py-8 px-2 lg:px-4 flex flex-col gap-4 bg-gray-50 shadow-sm h-full overflow-scroll"
 	>
 		<h1 class="font-bold text-xl">Current Order</h1>
 
 		<!-- items -->
-		<div class="grow">
+		<div class="grow flex flex-col overflow-y-scroll">
 			<app-checkout-product-item
+				(decrementClick)="
+					systemService.modifyCheckoutProductQuantity(checkoutProduct, false)
+				"
+				(incrementClick)="
+					systemService.modifyCheckoutProductQuantity(checkoutProduct, true)
+				"
 				*ngFor="let checkoutProduct of systemService.checkoutProducts"
 				[checkoutProduct]="checkoutProduct"
 			></app-checkout-product-item>
+
+			<div
+				*ngIf="systemService.checkoutProducts.length === 0"
+				class="text-gray-400 py-4 flex flex-col gap-2 items-center justify-self-end"
+			>
+				<fa-icon class="text-3xl" [icon]="faBagShopping"></fa-icon>
+				<p class="font-bold text-sm">Empty</p>
+			</div>
 		</div>
 
 		<!-- bottom -->

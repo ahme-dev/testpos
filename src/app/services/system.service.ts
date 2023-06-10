@@ -42,14 +42,55 @@ export class SystemService {
 
 	// add an item to the checkout
 	addToCheckout(product: IProduct) {
+		// add to checkout
 		this.checkoutProducts.push({ ...product, quantity: 1 });
+
+		// then remove from products
+		this.products = this.products.filter((p) => p.id !== product.id);
 	}
 
 	// remove an item from the checkout
 	removeFromCheckout(product: ICheckoutProduct) {
+		// add to products
+		this.products.push({
+			about: product.about,
+			category: product.category,
+			id: product.id,
+			name: product.name,
+			pictureLink: product.pictureLink,
+			price: product.price,
+		});
+
+		// then remove from checkout
 		this.checkoutProducts = this.checkoutProducts.filter(
 			(p) => p.id !== product.id,
 		);
+	}
+
+	// modify the quantity of an item in the checkout either by increasing or decreasing
+	modifyCheckoutProductQuantity(
+		checkoutProduct: ICheckoutProduct,
+		increment: boolean,
+	) {
+		const index = this.checkoutProducts.findIndex((pItem) => {
+			return pItem.id === checkoutProduct.id;
+		});
+
+		// if not found return
+		if (index === -1) return;
+
+		// increment
+		if (increment) {
+			this.checkoutProducts[index].quantity++;
+			return;
+		}
+
+		// decrement
+		this.checkoutProducts[index].quantity--;
+
+		// remove if quantity is 0
+		if (this.checkoutProducts[index].quantity === 0)
+			this.removeFromCheckout(checkoutProduct);
 	}
 
 	// calculate the total price of the checkout
@@ -66,6 +107,9 @@ export class SystemService {
 
 	// calculate the total price of the checkout after discount
 	get priceAfterDiscount() {
-		return this.checkoutTotal - this.checkoutDiscount;
+		// calculate the discount price
+		const discountPrice = this.checkoutTotal - this.checkoutDiscount;
+		// floor it
+		return Math.floor(discountPrice * 100) / 100;
 	}
 }

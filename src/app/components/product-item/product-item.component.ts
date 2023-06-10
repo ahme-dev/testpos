@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
 import { IProduct } from "src/app/models/product.model";
 
 @Component({
@@ -14,4 +14,6 @@ export class ProductItemComponent {
 		price: 0,
 		pictureLink: "",
 	};
+
+	@Output() onClick = new EventEmitter();
 }

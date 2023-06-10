@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { ICheckoutProduct } from "src/app/models/product.model";
 
 @Component({
@@ -15,4 +15,7 @@ export class CheckoutProductItemComponent {
 		pictureLink: "",
 		quantity: 1,
 	};
+
+	@Output() decrementClick = new EventEmitter();
+	@Output() incrementClick = new EventEmitter();
 }

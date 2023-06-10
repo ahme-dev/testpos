@@ -5,8 +5,10 @@
 		class="rounded-md shadow-sm h-20 lg:w-auto lg:h-full lg:aspect-square object-cover"
 		alt="product picture"
 	/>
-	<div class="flex flex-col grow justify-center">
-		<h1 class="font-bold">{{ checkoutProduct.name }}</h1>
+	<div class="flex flex-col grow justify-center overflow-hidden gap-1">
+		<h1 class="font-bold leading-4">
+			{{ checkoutProduct.name }}
+		</h1>
 
 		<div
 			class="flex flex-col lg:flex-row justify-between gap-1 lg:gap-4 items-start lg:items-center text-sm font-bold text-pink-600"
@@ -16,12 +18,14 @@
 			<div class="flex flex-row gap-4">
 				<button
 					class="px-1 font-bold bg-gray-200 shadow-sm active:ring-2 active:ring-pink-600 transition-all rounded-sm"
+					(click)="decrementClick.emit()"
 				>
 					-
 				</button>
 				<p>{{ checkoutProduct.quantity }}</p>
 				<button
 					class="px-1 font-bold bg-pink-600 text-gray-50 shadow-sm active:ring-2 active:ring-pink-600 transition-all rounded-sm"
+					(click)="incrementClick.emit()"
 				>
 					+
 				</button>
