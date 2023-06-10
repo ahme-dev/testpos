@@ -15,7 +15,7 @@ export const mockProducts: IProduct[] = [
 		name: "Slim Fit Denim Jeans",
 		about: "High-quality denim jeans with a slim fit design.",
 		category: "Jeans",
-		pictureLink: "../assets/jacket.jpg",
+		pictureLink: "../assets/shirt.jpg",
 	},
 	{
 		id: 3,
@@ -32,7 +32,7 @@ export const mockProducts: IProduct[] = [
 		name: "Striped Oxford Shirt",
 		about: "A classic oxford shirt with a timeless striped pattern.",
 		category: "Shirts",
-		pictureLink: "../assets/jacket.jpg",
+		pictureLink: "../assets/shirt.jpg",
 	},
 	{
 		id: 5,
@@ -48,7 +48,7 @@ export const mockProducts: IProduct[] = [
 		name: "Slim Fit Distressed Jeans",
 		about: "Stylish distressed jeans with a modern slim fit.",
 		category: "Jeans",
-		pictureLink: "../assets/jacket.jpg",
+		pictureLink: "../assets/shirt.jpg",
 	},
 	{
 		id: 7,
@@ -64,7 +64,7 @@ export const mockProducts: IProduct[] = [
 		name: "Cotton Casual Shirt",
 		about: "A comfortable and casual shirt made of soft cotton fabric.",
 		category: "Shirts",
-		pictureLink: "../assets/jacket.jpg",
+		pictureLink: "../assets/shirt.jpg",
 	},
 	{
 		id: 9,
@@ -80,7 +80,7 @@ export const mockProducts: IProduct[] = [
 		name: "High-Waisted Skinny Jeans",
 		about: "Trendy high-waisted skinny jeans that flatter your figure.",
 		category: "Jeans",
-		pictureLink: "../assets/jacket.jpg",
+		pictureLink: "../assets/shirt.jpg",
 	},
 	{
 		id: 11,
@@ -96,6 +96,6 @@ export const mockProducts: IProduct[] = [
 		name: "Button-Up Linen Shirt",
 		about: "A lightweight and breathable linen shirt with a button-up design.",
 		category: "Shirts",
-		pictureLink: "../assets/jacket.jpg",
+		pictureLink: "../assets/shirt.jpg",
 	},
 ];

@@ -3,23 +3,31 @@
 	<div class="grow py-12 px-8 flex flex-col gap-8 overflow-scroll">
 		<!-- filtering -->
 		<div class="flex flex-col gap-4">
+			<!-- welcome and search -->
 			<div class="grid grid-cols-2 gap-12 items-center">
 				<div class="flex flex-col gap-1">
-					<h1 class="text-lg font-bold">Welcome</h1>
+					<h1 class="text-xl font-bold">Welcome</h1>
 					<p class="text-sm">Greeting and salutations</p>
 				</div>
-				<input
-					type="text"
-					class="w-full px-4 py-2 rounded-xl shadow-sm"
-					placeholder="search"
-				/>
+
+				<div
+					class="px-4 py-2 rounded-full shadow-sm bg-neutral-50 focus-within:ring-2 ring-pink-600 transition-all flex flex-row"
+				>
+					<input
+						type="text"
+						class="w-full h-full focus:outline-none placeholder:text-neutral-500"
+						placeholder="Search anything here..."
+					/>
+					<fa-icon class="text-neutral-500" [icon]="faSearch"></fa-icon>
+				</div>
 			</div>
 
+			<!-- category -->
 			<div class="flex flex-row gap-4 items-center">
 				<p class="">Categories</p>
 				<div class="grow flex flex-row gap-4 justify-end">
 					<button
-						class="py-1 px-8 rounded-lg shadow-sm"
+						class="py-1 px-8 rounded-lg shadow-sm active:ring-2 ring-pink-600 transition-all"
 						[ngClass]="{
 						'bg-pink-600 text-white': category === 'Dresses',
 						'bg-neutral-50 text-neutral-700': category !== 'Dresses',
