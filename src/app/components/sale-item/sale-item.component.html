@@ -15,9 +15,9 @@
 		</div>
 	</div>
 
-	<h1 class="text-gray-400">{{ sale.invoiceDate }}</h1>
+	<h1 class="text-gray-400">{{ sale.invoiceDate | date }}</h1>
 
-	<h1 class="text-gray-400">{{ sale.payoutDate }}</h1>
+	<h1 class="text-gray-400">{{ sale.payoutDate | date }}</h1>
 
 	<h1 class="text-gray-400">{{ sale.totalAmount | dollar }}</h1>
 
