@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
 	faCircleQuestion,
 	faCommentDots,
@@ -28,6 +29,8 @@ export class SidebarComponent {
 	faCircleQuestion = faCircleQuestion;
 	faCommentDots = faCommentDots;
 	faArrowRightFromBracket = faArrowRightFromBracket;
+
+	faGithub = faGithub;
 
 	constructor(private router: Router) {}
 
