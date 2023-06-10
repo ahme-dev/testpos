@@ -1,8 +1,13 @@
 <div
-	class="py-16 px-8 flex flex-col items-center gap-4 h-screen overflow-scroll"
+	class="py-12 px-8 flex flex-col items-center gap-4 h-screen overflow-scroll"
 >
 	<!-- add button -->
-	<button class="self-end">Customer</button>
+	<div
+		class="self-end bg-pink-600 py-3 px-5 rounded-md text-gray-50 text-sm font-bold flex flex-row gap-1 cursor-pointer active:ring-2 ring-pink-600 transition-all"
+	>
+		<fa-icon [icon]="faPlus"></fa-icon>
+		<p>Customer</p>
+	</div>
 
 	<!-- board -->
 	<div class="rounded-lg w-full shadow-sm">

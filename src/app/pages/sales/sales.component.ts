@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { SalesService } from "src/app/services/sales.service";
 
 @Component({
@@ -6,5 +7,7 @@ import { SalesService } from "src/app/services/sales.service";
 	templateUrl: "./sales.component.html",
 })
 export class SalesComponent {
+	faPlus = faPlus;
+
 	constructor(public salesService: SalesService) {}
 }

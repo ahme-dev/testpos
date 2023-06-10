@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { ISale, ISaleWithSelect } from "src/app/models/sale.model";
 
 @Component({
@@ -6,6 +7,8 @@ import { ISale, ISaleWithSelect } from "src/app/models/sale.model";
 	templateUrl: "./sale-item.component.html",
 })
 export class SaleItemComponent {
+	faEye = faEye;
+
 	@Input() alternate = false;
 
 	@Output() onToggleSelect = new EventEmitter();
