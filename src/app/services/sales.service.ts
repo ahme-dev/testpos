@@ -11,6 +11,8 @@ export class SalesService {
 		selected: false,
 	}));
 
+	allSelected = false;
+
 	// toggle the selection of a sale
 	toggleSelection(sale: ISale) {
 		this.sales.forEach((s) => {
@@ -22,6 +24,8 @@ export class SalesService {
 
 	// toggle the selection of all sales
 	toggleSelectionAll() {
-		this.sales.forEach((sale) => (sale.selected = !sale.selected));
+		this.sales.forEach(
+			(sale) => (sale.selected = this.allSelected == true ? true : false),
+		);
 	}
 }

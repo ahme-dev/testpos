@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { ISale, ISaleWithSelect } from "src/app/models/sale.model";
 
 @Component({
@@ -7,6 +7,8 @@ import { ISale, ISaleWithSelect } from "src/app/models/sale.model";
 })
 export class SaleItemComponent {
 	@Input() alternate = false;
+
+	@Output() onToggleSelect = new EventEmitter();
 
 	@Input() sale: ISaleWithSelect = {
 		id: -1,
