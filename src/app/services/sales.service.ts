@@ -10,4 +10,18 @@ export class SalesService {
 		...sale,
 		selected: false,
 	}));
+
+	// toggle the selection of a sale
+	toggleSelection(sale: ISale) {
+		this.sales.forEach((s) => {
+			if (s.id === sale.id) {
+				s.selected = !s.selected;
+			}
+		});
+	}
+
+	// toggle the selection of all sales
+	toggleSelectionAll() {
+		this.sales.forEach((sale) => (sale.selected = !sale.selected));
+	}
 }

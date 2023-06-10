@@ -1,0 +1,27 @@
+<div
+	class="grid grid-cols-6 gap-4 px-8 py-4 items-center text-sm font-bold shadow-md"
+	[class]="alternate ? 'bg-gray-50/80' : 'bg-gray-50'"
+>
+	<div class="flex flex-row gap-8">
+		<input type="checkbox" [value]="sale.selected" />
+
+		<div class="flex flex-col">
+			<h1>{{ sale.customer.name }}</h1>
+			<p class="text-gray-400">{{ sale.customer.address }}</p>
+		</div>
+	</div>
+
+	<h1 class="text-gray-400">{{ sale.invoiceDate }}</h1>
+
+	<h1 class="text-gray-400">{{ sale.payoutDate }}</h1>
+
+	<h1 class="text-gray-400">{{ sale.totalAmount }}</h1>
+
+	<p class="text-gray-400">{{ sale.status }}</p>
+
+	<div
+		class="shadow-sm border border-gray-200 flex flex-row gap-1 py-2 px-4 items-center rounded-sm w-fit"
+	>
+		<p>View Invoice</p>
+	</div>
+</div>
