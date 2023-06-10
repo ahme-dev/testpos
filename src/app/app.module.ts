@@ -13,9 +13,9 @@ import { SidebarItemComponent } from "./components/sidebar-item/sidebar-item.com
 import { ProductItemComponent } from "./components/product-item/product-item.component";
 import { CheckoutProductItemComponent } from "./components/checkout-product-item/checkout-product-item.component";
 import { FormsModule } from "@angular/forms";
-import { SaleItemComponent } from './components/sale-item/sale-item.component';
-import { DollarPipe } from './pipes/dollar.pipe';
-import { DatePipe } from './pipes/date.pipe';
+import { SaleItemComponent } from "./components/sale-item/sale-item.component";
+import { DollarPipe } from "./pipes/dollar.pipe";
+import { DatePipe } from "./pipes/date.pipe";
 
 @NgModule({
 	declarations: [
@@ -26,9 +26,9 @@ import { DatePipe } from './pipes/date.pipe';
 		SidebarItemComponent,
 		ProductItemComponent,
 		CheckoutProductItemComponent,
-  SaleItemComponent,
-  DollarPipe,
-  DatePipe,
+		SaleItemComponent,
+		DollarPipe,
+		DatePipe,
 	],
 	imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
 	providers: [SystemService, SalesService],
