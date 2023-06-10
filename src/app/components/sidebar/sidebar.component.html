@@ -3,13 +3,20 @@
 >
 	<a
 		href="https://github.com/ahmeddots/testpos"
-		class="self-center flex flex-col gap-2 items-center justify-center cursor-pointer drop-shadow-md hover:text-pink-600 transition-all rounded-full group overflow-hidden"
+		class="group relative self-center flex flex-col gap-2 items-center justify-center cursor-pointer drop-shadow-md hover:text-pink-600 transition-all rounded-full"
 		target="_blank"
 	>
 		<fa-icon
 			class="text-3xl lg:text-6xl group-hover:animate-spin transition-all"
 			[icon]="faGithub"
 		></fa-icon>
+
+		<div
+			class="py-1 group-hover:px-2 bg-pink-600 text-transparent overflow-hidden w-0 h-20 absolute group-hover:w-64 group-hover -bottom-24 -left-0 rounded-lg group-hover:text-gray-50 transition-all font-bold text-xs"
+		>
+			Why did the developer go broke? Because he spent all his money on Angular,
+			but couldn't find a job as everyone was hiring React developers!
+		</div>
 	</a>
 
 	<!-- center -->
