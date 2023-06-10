@@ -1,6 +1,6 @@
-<div class="flex flex-row h-full">
+<div class="flex flex-row h-screen">
 	<!-- products -->
-	<div class="grow py-12 px-8 flex flex-col gap-8">
+	<div class="grow py-12 px-8 flex flex-col gap-8 overflow-scroll">
 		<!-- filtering -->
 		<div class="flex flex-col gap-4">
 			<div class="grid grid-cols-2 gap-12 items-center">
@@ -15,25 +15,31 @@
 				/>
 			</div>
 
-			<div class="flex flex-row gap-4 justify-evenly">
-				<button
-					class="py-1 px-8 rounded-lg shadow-sm"
-					[ngClass]="{
+			<div class="flex flex-row gap-4 items-center">
+				<p class="">Categories</p>
+				<div class="grow flex flex-row gap-4 justify-end">
+					<button
+						class="py-1 px-8 rounded-lg shadow-sm"
+						[ngClass]="{
 						'bg-pink-600 text-white': category === 'Dresses',
 						'bg-neutral-50 text-neutral-700': category !== 'Dresses',
 					}"
-					*ngFor="
-						let category of ['Dresses', 'Jeans', 'Skirts', 'Shirts', 'All']
-					"
-				>
-					{{ category }}
-				</button>
+						*ngFor="
+							let category of ['Dresses', 'Jeans', 'Skirts', 'Shirts', 'All']
+						"
+					>
+						{{ category }}
+					</button>
+				</div>
 			</div>
 		</div>
 
 		<!-- list -->
-		<div class="grid grid-cols-4 gap-2">
-			<h1 *ngFor="let product of products">{{ product.name }}</h1>
+		<div class="grid grid-cols-4 gap-4">
+			<app-product-item
+				*ngFor="let product of products"
+				[product]="product"
+			></app-product-item>
 		</div>
 	</div>
 

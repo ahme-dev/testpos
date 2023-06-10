@@ -6,6 +6,7 @@ export interface IProduct {
 	name: string;
 	about: string;
 	category: IProductCategory;
+	pictureLink: string;
 }
 
 export interface ICheckoutProduct extends IProduct {

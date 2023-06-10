@@ -7,6 +7,7 @@ export const mockProducts: IProduct[] = [
 		name: "Blue Floral Dress",
 		about: "A beautiful dress with a floral pattern, perfect for any occasion.",
 		category: "Dresses",
+		pictureLink: "../assets/jacket.jpg",
 	},
 	{
 		id: 2,
@@ -14,6 +15,7 @@ export const mockProducts: IProduct[] = [
 		name: "Slim Fit Denim Jeans",
 		about: "High-quality denim jeans with a slim fit design.",
 		category: "Jeans",
+		pictureLink: "../assets/jacket.jpg",
 	},
 	{
 		id: 3,
@@ -22,6 +24,7 @@ export const mockProducts: IProduct[] = [
 		about:
 			"A stylish plaid skirt that adds a touch of elegance to your outfit.",
 		category: "Skirts",
+		pictureLink: "../assets/jacket.jpg",
 	},
 	{
 		id: 4,
@@ -29,6 +32,7 @@ export const mockProducts: IProduct[] = [
 		name: "Striped Oxford Shirt",
 		about: "A classic oxford shirt with a timeless striped pattern.",
 		category: "Shirts",
+		pictureLink: "../assets/jacket.jpg",
 	},
 	{
 		id: 5,
@@ -36,6 +40,7 @@ export const mockProducts: IProduct[] = [
 		name: "Maxi Evening Gown",
 		about: "An elegant and glamorous gown for special evening events.",
 		category: "Dresses",
+		pictureLink: "../assets/jacket.jpg",
 	},
 	{
 		id: 6,
@@ -43,6 +48,7 @@ export const mockProducts: IProduct[] = [
 		name: "Slim Fit Distressed Jeans",
 		about: "Stylish distressed jeans with a modern slim fit.",
 		category: "Jeans",
+		pictureLink: "../assets/jacket.jpg",
 	},
 	{
 		id: 7,
@@ -50,6 +56,7 @@ export const mockProducts: IProduct[] = [
 		name: "Pleated Midi Skirt",
 		about: "A chic and versatile midi skirt with pleated details.",
 		category: "Skirts",
+		pictureLink: "../assets/jacket.jpg",
 	},
 	{
 		id: 8,
@@ -57,6 +64,7 @@ export const mockProducts: IProduct[] = [
 		name: "Cotton Casual Shirt",
 		about: "A comfortable and casual shirt made of soft cotton fabric.",
 		category: "Shirts",
+		pictureLink: "../assets/jacket.jpg",
 	},
 	{
 		id: 9,
@@ -64,6 +72,7 @@ export const mockProducts: IProduct[] = [
 		name: "Embroidered Cocktail Dress",
 		about: "A stunning cocktail dress with intricate embroidery.",
 		category: "Dresses",
+		pictureLink: "../assets/jacket.jpg",
 	},
 	{
 		id: 10,
@@ -71,6 +80,7 @@ export const mockProducts: IProduct[] = [
 		name: "High-Waisted Skinny Jeans",
 		about: "Trendy high-waisted skinny jeans that flatter your figure.",
 		category: "Jeans",
+		pictureLink: "../assets/jacket.jpg",
 	},
 	{
 		id: 11,
@@ -78,6 +88,7 @@ export const mockProducts: IProduct[] = [
 		name: "Floral Print Mini Skirt",
 		about: "A playful mini skirt featuring a vibrant floral print.",
 		category: "Skirts",
+		pictureLink: "../assets/jacket.jpg",
 	},
 	{
 		id: 12,
@@ -85,5 +96,6 @@ export const mockProducts: IProduct[] = [
 		name: "Button-Up Linen Shirt",
 		about: "A lightweight and breathable linen shirt with a button-up design.",
 		category: "Shirts",
+		pictureLink: "../assets/jacket.jpg",
 	},
 ];

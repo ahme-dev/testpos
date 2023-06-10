@@ -10,6 +10,7 @@ import { SalesComponent } from "./pages/sales/sales.component";
 import { SalesService } from "./services/sales.service";
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { SidebarItemComponent } from "./components/sidebar-item/sidebar-item.component";
+import { ProductItemComponent } from './components/product-item/product-item.component';
 
 @NgModule({
 	declarations: [
@@ -18,6 +19,7 @@ import { SidebarItemComponent } from "./components/sidebar-item/sidebar-item.com
 		SalesComponent,
 		SidebarComponent,
 		SidebarItemComponent,
+  ProductItemComponent,
 	],
 	imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
 	providers: [SystemService, SalesService],
