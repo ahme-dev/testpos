@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
+import { faCheck, faSpinner, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { ISale, ISaleWithSelect } from "src/app/models/sale.model";
 
 @Component({
@@ -8,6 +9,9 @@ import { ISale, ISaleWithSelect } from "src/app/models/sale.model";
 })
 export class SaleItemComponent {
 	faEye = faEye;
+	faCheck = faCheck;
+	faSpinner = faSpinner;
+	faTimes = faTimes;
 
 	@Input() alternate = false;
 
