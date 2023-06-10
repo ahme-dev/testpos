@@ -1,4 +1,4 @@
-import { IProduct } from "../models/product.model";
+import { ICheckoutProduct, IProduct } from "../models/product.model";
 
 export const mockProducts: IProduct[] = [
 	{
@@ -97,5 +97,26 @@ export const mockProducts: IProduct[] = [
 		about: "A lightweight and breathable linen shirt with a button-up design.",
 		category: "Shirts",
 		pictureLink: "../assets/shirt.jpg",
+	},
+];
+
+export const mockCheckoutProducts: ICheckoutProduct[] = [
+	{
+		id: 1,
+		price: 19.99,
+		name: "Blue Floral Dress",
+		about: "A beautiful dress with a floral pattern, perfect for any occasion.",
+		category: "Dresses",
+		pictureLink: "../assets/jacket.jpg",
+		quantity: 2,
+	},
+	{
+		id: 12,
+		price: 44.99,
+		name: "Button-Up Linen Shirt",
+		about: "A lightweight and breathable linen shirt with a button-up design.",
+		category: "Shirts",
+		pictureLink: "../assets/shirt.jpg",
+		quantity: 1,
 	},
 ];

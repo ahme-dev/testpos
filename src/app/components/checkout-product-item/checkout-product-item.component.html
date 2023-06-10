@@ -1,0 +1,31 @@
+<div class="flex flex-row gap-2 p-2 h-16 w-full">
+	<!-- picture -->
+	<img
+		[src]="checkoutProduct.pictureLink"
+		class="rounded-md shadow-sm aspect-square object-cover"
+		alt="product picture"
+	/>
+	<div class="flex flex-col grow">
+		<h1 class="font-bold">{{ checkoutProduct.name }}</h1>
+
+		<div
+			class="flex flex-row justify-between gap-4 items-center text-sm font-bold text-pink-600"
+		>
+			<p>{{ checkoutProduct.price }}</p>
+
+			<div class="flex flex-row gap-4">
+				<button
+					class="px-1 font-bold bg-gray-200 shadow-sm active:ring-2 active:ring-pink-600 transition-all rounded-sm"
+				>
+					-
+				</button>
+				<p>{{ checkoutProduct.quantity }}</p>
+				<button
+					class="px-1 font-bold bg-pink-600 text-gray-50 shadow-sm active:ring-2 active:ring-pink-600 transition-all rounded-sm"
+				>
+					+
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

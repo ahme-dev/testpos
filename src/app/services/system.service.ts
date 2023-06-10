@@ -4,7 +4,7 @@ import {
 	IProduct,
 	IProductCategory,
 } from "../models/product.model";
-import { mockProducts } from "../mock/products.mock";
+import { mockCheckoutProducts, mockProducts } from "../mock/products.mock";
 
 @Injectable({
 	providedIn: "root",
@@ -16,7 +16,7 @@ export class SystemService {
 
 	// the products listed and ones in the checkout
 	products: IProduct[] = mockProducts;
-	checkoutProducts: ICheckoutProduct[] = [];
+	checkoutProducts: ICheckoutProduct[] = mockCheckoutProducts;
 
 	// add an item to the checkout
 	addToCheckout(product: IProduct) {
