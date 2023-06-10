@@ -10,8 +10,9 @@
 		<div
 			class="grid grid-cols-6 gap-4 px-8 py-6 items-center text-sm font-bold bg-gray-50/80 border-b border-gray-300 rounded-t-lg"
 		>
-			<div class="flex flex-row gap-8">
+			<div class="flex flex-row gap-8 items-center">
 				<input
+					class="rounded-sm text-pink-600 border-gray-400 focus:ring-0 cursor-pointer shadow-sm"
 					[(ngModel)]="salesService.allSelected"
 					(change)="salesService.toggleSelectionAll()"
 					type="checkbox"
