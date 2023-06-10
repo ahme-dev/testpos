@@ -13,7 +13,7 @@
 				</div>
 
 				<div
-					class="px-4 py-2 h-min rounded-full shadow-sm bg-gray-50 focus-within:ring-2 ring-pink-600 transition-all flex flex-row gap-2 items-center"
+					class="px-4 rounded-full shadow-sm bg-gray-50 focus-within:ring-2 ring-pink-600 transition-all flex flex-row gap-2 items-center"
 				>
 					<input
 						type="text"
@@ -100,12 +100,12 @@
 			<div class="flex flex-col gap-2 text-xs bg-gray-200 py-6 font-bold">
 				<div class="flex flex-row justify-between px-4">
 					<p class="text-gray-400">Subtital</p>
-					<p>{{ systemService.checkoutTotal }}</p>
+					<p>{{ systemService.checkoutTotal | dollar }}</p>
 				</div>
 
 				<div class="flex flex-row justify-between px-4">
 					<p class="text-gray-400">Discount</p>
-					<p>{{ systemService.checkoutDiscount }}</p>
+					<p>{{ systemService.checkoutDiscount | dollar }}</p>
 				</div>
 
 				<div class="flex flex-row h-8 items-center">
@@ -116,7 +116,7 @@
 
 				<div class="flex flex-row justify-between px-4">
 					<p>Total</p>
-					<p>{{ systemService.priceAfterDiscount }}</p>
+					<p>{{ systemService.priceAfterDiscount | dollar }}</p>
 				</div>
 			</div>
 

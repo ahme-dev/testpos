@@ -14,6 +14,7 @@ import { ProductItemComponent } from "./components/product-item/product-item.com
 import { CheckoutProductItemComponent } from "./components/checkout-product-item/checkout-product-item.component";
 import { FormsModule } from "@angular/forms";
 import { SaleItemComponent } from './components/sale-item/sale-item.component';
+import { DollarPipe } from './pipes/dollar.pipe';
 
 @NgModule({
 	declarations: [
@@ -25,6 +26,7 @@ import { SaleItemComponent } from './components/sale-item/sale-item.component';
 		ProductItemComponent,
 		CheckoutProductItemComponent,
   SaleItemComponent,
+  DollarPipe,
 	],
 	imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
 	providers: [SystemService, SalesService],
