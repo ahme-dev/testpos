@@ -1,17 +1,17 @@
 <div
-	class="flex flex-row justify-between gap-10 pe-2 cursor-pointer"
+	class="flex flex-row gap-2 lg:gap-10 pe-2 cursor-pointer hover:text-pink-600 transition-all"
 	[ngClass]="{
-		'text-pink-600': selected,
+		'text-pink-600': selected || alwaysHighlight,
 		'text-gray-500': secondary,
 	}"
 >
 	<!-- left -->
-	<div class="flex flex-row gap-4 items-center">
+	<div class="flex flex-row gap-4 items-center grow">
 		<fa-icon
 			[icon]="icon"
-			class="h-4 w-4 flex items-center justify-center"
+			class="text-xl h-8 w-8 lg:h-4 lg:w-4 flex items-center justify-center"
 		></fa-icon>
-		<p>{{ title }}</p>
+		<p class="whitespace-nowrap hidden lg:block">{{ title }}</p>
 	</div>
 
 	<!-- right -->
